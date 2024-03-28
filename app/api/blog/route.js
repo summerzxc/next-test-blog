@@ -2,7 +2,7 @@ import connectDB from "@/lib/db";
 import category from "@/model/scheme";
 import { NextResponse } from "next/server";
 import Cors from 'cors';
-import initMiddleware from '@/lib/init-middleware';
+import initMiddleware from '@/lib/initMiddleware';
 
 // Initialize the CORS middleware
 const cors = initMiddleware(
