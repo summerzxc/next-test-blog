@@ -16,7 +16,7 @@ export default function Publish() {
             <br />
             ップロードする
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <input
               type="text"
               placeholder="タイトル"
@@ -35,8 +35,10 @@ export default function Publish() {
             placeholder="ここにテキストを送信します 。。。"
           ></textarea>
         </div>
-        <button className="btn btn-secondary">公開<BiSolidSend />
-</button>
+        <button className="btn btn-secondary">
+          公開
+          <BiSolidSend />
+        </button>
       </div>
     </div>
   );

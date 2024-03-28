@@ -1,5 +1,7 @@
 import React from "react";
 import { FaPenFancy } from "react-icons/fa";
+import { BiSolidCategory } from "react-icons/bi";
+
 
 export default function Navbar() {
   return (
@@ -10,6 +12,10 @@ export default function Navbar() {
         </a>
         <a href="/pages/publish" className="btn btn-sqaure btn-ghost">
           <FaPenFancy />
+        </a>
+        <a href="/pages/category_publish" className="btn btn-sqaure btn-ghost">
+        <BiSolidCategory />
+
         </a>
       </div>
 
