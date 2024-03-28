@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { BiSolidSend } from "react-icons/bi";
 import axios from "axios";
 
-export default function page() {
+export default function Page() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [loading, setLoading] = useState(false);
