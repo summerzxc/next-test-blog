@@ -15,7 +15,7 @@ export default function Page() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("https://next-test-blog-anand.vercel.app/api/category", {
+      const response = await axios.post("/api/category", {
         title,
         description,
       });

@@ -18,3 +18,4 @@ if (mongoose.models.Category) {
 }
 
 export default categoryModel;
+
