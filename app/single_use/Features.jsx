@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Features() {
   return (
-    <div class="hero min-h-screen bg-base-200">
+    <div class="hero min-h-screen bg-base-200 py-[80px]">
       <div class="w-[1000px] flex flex-col gap-[60px]">
         <div className="w-full flex items-center justify-between">
           <div class="w-[400px]">

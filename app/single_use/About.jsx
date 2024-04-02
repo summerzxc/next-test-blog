@@ -4,7 +4,7 @@ import CountUpComponent from "../components/ui/CountUpAnimation";
 
 export default function About() {
   return (
-    <div class="hero min-h-screen bg-[#E0DCD1]">
+    <div class="hero min-h-screen bg-[#E0DCD1] py-[80px]">
       <div class="w-[1000px] flex flex-col gap-[60px]">
         <div className="w-full flex items-center justify-between">
           <Image
