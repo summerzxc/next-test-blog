@@ -12,10 +12,14 @@ export default function Action() {
           <p className="py-6">
             文章を書くことへの旅を始める準備はできていますか？当サイトでは、執筆に関する情報やアドバイスを提供し、あなたのクリエイティブな才能を引き出すお手伝いをします。さあ、新しいアイデアを探求し、ストーリーを紡ぎましょう。
           </p>
-          <button className="btn btn-primary">書き始める<HiArrowRight /></button>
+          <a href="/pages/blogs">
+            <button className="btn btn-primary">
+              書き始める
+              <HiArrowRight />
+            </button>
+          </a>
         </div>
       </div>
-      
     </div>
   );
 }

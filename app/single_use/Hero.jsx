@@ -18,18 +18,20 @@ export default function Hero() {
             <br />
             ここから、踏み出しましょう
           </p>
-          <button className="btn btn-primary">
-            始める
-            <HiArrowRight />
-          </button>
+          <a href="/pages/blogs">
+            <button className="btn btn-primary">
+              始める
+              <HiArrowRight />
+            </button>
+          </a>
         </div>
-          <Image
-            src="/vase.webp"
-            alt="hero"
-            width={500}
-            height={500}
-            className="rounded-lg"
-          />
+        <Image
+          src="/vase.webp"
+          alt="hero"
+          width={500}
+          height={500}
+          className="rounded-lg"
+        />
       </div>
     </div>
   );

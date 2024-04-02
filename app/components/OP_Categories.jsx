@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Category from "./ui/OP_Category";
 import axios from "axios";
-export default function Categories() {
+export default function OP_Categories() {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const getData = async () => {

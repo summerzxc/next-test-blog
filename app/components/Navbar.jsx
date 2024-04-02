@@ -42,10 +42,10 @@ export default function Navbar() {
                 <summary className="font-[600]">公共事業</summary>
                 <ul class="p-2">
                   <li>
-                    <a className="flex gap-3 font-[600]"><FaPenFancy className="text-[18px]"/><span className="text-nowrap">Publish / 公開</span></a>
+                    <a href="/pages/publish" className="flex gap-3 font-[600]"><FaPenFancy className="text-[18px]"/><span className="text-nowrap">Publish / 公開</span></a>
                   </li>
                   <li>
-                  <a className="flex gap-3 font-[600]"><FaBookOpen className="text-[18px]"/><span className="text-nowrap">Blogs / ブログ</span></a>
+                  <a href="/pages/blogs" className="flex gap-3 font-[600]"><FaBookOpen className="text-[18px]"/><span className="text-nowrap">Blogs / ブログ</span></a>
                   </li>
                 </ul>
               </details>
