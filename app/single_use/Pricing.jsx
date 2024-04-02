@@ -2,7 +2,7 @@ import React from "react";
 import { HiArrowRight } from "react-icons/hi";
 import { IoMdCheckmark } from "react-icons/io";
 import { GoArrowRight } from "react-icons/go";
-
+import Image from "next/image";
 
 export default function Pricing() {
   return (
@@ -21,7 +21,7 @@ export default function Pricing() {
           </div>
         </div>
         <div className="flex gap-8">
-          <div className="p-6 h-[320px] w-[280px] text-black rounded-lg bg-[#EFEDE7]">
+          <div className="cursor-pointer group p-6 h-[320px] w-[280px] text-black rounded-lg bg-[#EFEDE7] overflow-hidden">
             <div className="rounded-[20px] px-3 py-1 bg-white text-black w-fit text-[14px]">
               ¥ 2,500 <span className="english-display">IN ASSETS</span>
             </div>
@@ -42,13 +42,22 @@ export default function Pricing() {
                 <span>メールサポート</span>
               </li>
             </ul>
+            <div className="group-hover:scale-110 duration-500 pt-6 w-[232px] h-[232px]">
+              <Image
+                src="/marble-white.png"
+                alt="marble"
+                width={300}
+                height={300}
+                className="rounded-lg"
+              />
+            </div>
           </div>
-          <div className="p-6 h-[320px] w-[280px] text-white rounded-lg bg-black">
+          <div className="cursor-pointer group p-6 h-[320px] w-[280px] text-white rounded-lg bg-black overflow-hidden">
             <div className="rounded-[20px] px-3 py-1 bg-white/20 text-white  w-fit text-[14px]">
               ¥ 15,000 <span className="english-display">IN ASSETS</span>
             </div>
             <h4 className="font-[600] english-display text-3xl mt-6 flex gap-2 items-center">
-              Generation <GoArrowRight/>
+              Generation <GoArrowRight />
             </h4>
             <ul className="mt-4">
               <li className="flex gap-2 items-center">
@@ -64,6 +73,15 @@ export default function Pricing() {
                 <span>独占アクセス</span>
               </li>
             </ul>
+            <div className="group-hover:scale-110 duration-500 pt-6 w-[232px] h-[232px]">
+              <Image
+                src="/marble-dark.jpg"
+                alt="marble"
+                width={300}
+                height={300}
+                className="rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
