@@ -1,4 +1,5 @@
 import "./globals.css";
+import SmoothScrolling from "./SmoothScrolling";
 import { AuthProvider } from "./Providers";
 
 export const metadata = {
@@ -17,8 +18,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
+
       <body>
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <SmoothScrolling>{children}</SmoothScrolling>
+        </AuthProvider>
       </body>
     </html>
   );

@@ -2,9 +2,7 @@
 
 import React from "react";
 import { FaPenFancy } from "react-icons/fa";
-import { BiSolidCategory } from "react-icons/bi";
-import { RiListIndefinite } from "react-icons/ri";
-import { TiNews } from "react-icons/ti";
+import { FaBookOpen } from "react-icons/fa";
 import { RiMenu4Fill } from "react-icons/ri";
 
 import { useSession, signOut } from "next-auth/react";
@@ -19,24 +17,35 @@ export default function Navbar() {
   return (
     <div className="flex items-center w-full py-[20px] px-4 bg-glass md:justify-start justify-between fixed">
       <div className="navbar-start items-center md:flex hidden">
-        <a
-          href="/"
-          className="btn btn-ghost font-[500]"
-        >
+        <a href="/" className="btn btn-ghost font-[500]">
           <span className="text-[32px]">知の泉</span>
         </a>
-        <a href="/pages/publish" className="btn btn-sqaure btn-ghost">
-          <FaPenFancy className="text-lg"/>
-        </a>
-        <a href="/pages/blogs" className="btn btn-sqaure btn-ghost">
-          <TiNews className="text-lg"/>
-        </a>
-        <a href="/pages/category_publish" className="btn btn-sqaure btn-ghost">
-          <BiSolidCategory className="text-lg"/>
-        </a>
-        <a href="/pages/categories" className="btn btn-sqaure btn-ghost">
-          <RiListIndefinite className="text-lg"/>
-        </a>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <a className="font-[600]">帰宅する</a>
+            </li>
+            <li>
+            <a className="font-[600]">特徴</a>
+            </li>
+            <li>
+            <a className="font-[600]">私供</a>
+            </li>
+            <li>
+            <details>
+                <summary className="font-[600]">公共事業</summary>
+                <ul class="p-2">
+                  <li>
+                    <a className="flex gap-3 font-[600]"><FaPenFancy className="text-[18px]"/><span className="text-nowrap">Publish / 公開</span></a>
+                  </li>
+                  <li>
+                  <a className="flex gap-3 font-[600]"><FaBookOpen className="text-[18px]"/><span className="text-nowrap">Blogs / ブログ</span></a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="navbar-start flex items-center md:hidden">
         <div className="dropdown">
@@ -92,7 +101,11 @@ export default function Navbar() {
         )}
       </div>
       <div className="dropdown dropdown-end md:hidden block">
-        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn btn-ghost btn-circle avatar"
+        >
           <div className="w-10 rounded-full">
             <img
               alt="Tailwind CSS Navbar component"

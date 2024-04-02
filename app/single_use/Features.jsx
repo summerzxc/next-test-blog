@@ -31,7 +31,7 @@ export default function Features() {
             </p>
           </div>
           <div className="basis-1/3">
-            <h3 className="text-xl font-[600]">モバイル最適化デザイン:</h3>
+            <h3 className="text-xl font-[600]">モバイル最適化デザイン</h3>
             <hr className="border-1 border-black my-2" />
             <p>
               このウェブサイトは、モバイルデバイスでの閲覧に最適化されたレスポンシブデザインを採用しています
