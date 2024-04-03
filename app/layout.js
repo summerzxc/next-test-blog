@@ -1,5 +1,5 @@
 import "./globals.css";
-import SmoothScrolling from "./SmoothScrolling";
+import SmoothScrolling from "./animations/SmoothScrolling";
 import { AuthProvider } from "./Providers";
 
 export const metadata = {

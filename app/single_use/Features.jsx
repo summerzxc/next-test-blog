@@ -15,10 +15,12 @@ export default function Features() {
             <p class="py-6">
               秘められた宝物が待つ街。観光地以外のユニークな魅力、知る人ぞ知るスポット、地元ならではの体験をご紹介。
             </p>
-            <button class="btn btn-primary">
-              詳細
-              <HiArrowRight />
-            </button>
+            <a href="/pages/underdev">
+              <button class="btn btn-primary">
+                詳細
+                <HiArrowRight />
+              </button>
+            </a>
           </div>
           <Image src="/cali.jpg" alt="hero" width={500} height={500} />
         </div>

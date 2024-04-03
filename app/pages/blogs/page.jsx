@@ -1,20 +1,24 @@
-import React from 'react'
-import Navbar from '@/app/components/Navbar'
-import BlogBar from '@/app/components/BlogBar'
-import BlogCategories from '@/app/components/Categories'
-
+import React from "react";
+import Navbar from "@/app/components/Navbar";
+import BlogBar from "@/app/components/blog-page/BlogBar";
+import BlogCategories from "@/app/components/blog-page/Categories";
+import BlogRightBar from "@/app/components/blog-page/BlogRightBar";
+import BlogSlider from "@/app/components/blog-page/BlogSlider";
 
 export default function Page() {
   return (
-    <div className='min-h-screen w-full flex flex-col'>
-      <BlogBar/>
-      <div className='pt-[60px]'></div>
-      <div className='w-[1000px] mx-auto flex gap-3'>
-        <div className='w-full'>
-          <BlogCategories/>
+    <div className="min-h-screen w-full flex flex-col">
+      <BlogBar />
+      <div className="pt-[60px]"></div>
+      <div className="w-[1200px] mx-auto flex gap-10">
+        <div className="basis-[70%]">
+          <BlogCategories />
+          <BlogSlider />
         </div>
-        <div className='w-full'></div>
+        <div className="basis-[30%]">
+          <BlogRightBar />
+        </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import CountUpComponent from "../components/ui/CountUpAnimation";
+import CountUpComponent from "../animations/CountUpAnimation";
 
 export default function About() {
   return (
