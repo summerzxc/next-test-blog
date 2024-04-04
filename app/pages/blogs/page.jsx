@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <div className="min-h-screen w-full flex flex-col">
       <BlogBar />
-      <div className="pt-[60px]"></div>
+      <div className="pt-[30px]"></div>
       <div className="w-[1200px] mx-auto flex gap-10">
         <div className="basis-[70%]">
           <BlogCategories />

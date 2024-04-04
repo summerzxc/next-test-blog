@@ -1,14 +1,18 @@
+"use client";
 import React from "react";
 import { FaPenAlt } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { BiBookmarkAlt } from "react-icons/bi";
-
+import { signOut } from "next-auth/react";
 
 export default function BlogBar() {
+  const handleLogout = async () => {
+    await signOut();
+  };
   return (
-    <div class="navbar max-w-[1200px] mx-auto bg-base-100 py-[20px]">
-      <div class="flex-1">
-        <a class="btn btn-ghost text-xl">
+    <div class="flex justify-between w-[1200px] mx-auto bg-base-100 py-[20px]">
+      <div class="flex-1 flex gap-2">
+        <a href="/" class="btn btn-ghost text-xl">
           <span className="text-[32px]">知の泉</span>
         </a>
         <div class="form-control">
@@ -19,16 +23,18 @@ export default function BlogBar() {
           />
         </div>
       </div>
-      <div className="flex gap-3 mr-3">
-        <button className="btn btn-primary">
-          <FaPenAlt />
-          書く
+      <div className="flex items-center mr-3">
+        <a href="/pages/publish">
+          <button className="btn btn-sm btn-outline mr-2">
+            <FaPenAlt />
+            書く
+          </button>
+        </a>
+        <button className="btn-ghost btn">
+          <FaBell size={18} />
         </button>
-        <button className="btn btn-secondary">
-          <FaBell />
-        </button>
-        <button className="btn btn-secondary">
-        <BiBookmarkAlt />
+        <button className="btn-ghost btn">
+          <BiBookmarkAlt size={18} />
         </button>
       </div>
       <div class="flex-none gap-2">
@@ -50,16 +56,15 @@ export default function BlogBar() {
             class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
           >
             <li>
-              <a class="justify-between">
+              <a href="/pages/underdev" class="justify-between">
                 Profile
-                <span class="badge">New</span>
               </a>
             </li>
             <li>
-              <a>Settings</a>
+              <a href="/pages/underdev">Settings</a>
             </li>
             <li>
-              <a>Logout</a>
+              <button onClick={handleLogout}>Logout</button>
             </li>
           </ul>
         </div>

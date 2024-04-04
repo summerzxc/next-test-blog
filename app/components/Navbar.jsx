@@ -12,13 +12,6 @@ export default function Navbar() {
   const handleLogout = async () => {
     await signOut();
   };
-  const handleClick = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    console.log(element)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <div className="flex items-center w-full py-[20px] px-4 glass md:justify-start justify-between fixed">
@@ -29,13 +22,13 @@ export default function Navbar() {
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
             <li>
-              <a className="font-[600]" onClick={() => handleClick('hero')}>帰宅する</a>
+              <a className="font-[600]">帰宅する</a>
             </li>
             <li>
-            <a className="font-[600]" onClick={() => handleClick('features')}>特徴</a>
+            <a className="font-[600]" >特徴</a>
             </li>
             <li>
-            <a className="font-[600]"onClick={() => handleClick('about')}>私供</a>
+            <a className="font-[600]">私供</a>
             </li>
             <li>
             <details>

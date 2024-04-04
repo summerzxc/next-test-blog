@@ -14,10 +14,12 @@ export default function Pricing() {
               Benefits that grow with you
             </h1>
             <p class="py-6">あなたと共に成長するメリット</p>
-            <button class="btn btn-accent">
-              詳細
-              <HiArrowRight />
-            </button>
+            <a href="/pages/underdev">
+              <button class="btn btn-accent">
+                詳細
+                <HiArrowRight />
+              </button>
+            </a>
           </div>
         </div>
         <div className="flex gap-8">
@@ -26,7 +28,7 @@ export default function Pricing() {
               ¥ 2,500 <span className="english-display">IN ASSETS</span>
             </div>
             <h4 className="font-[600] english-display text-3xl mt-6 flex gap-2 items-center">
-              Premium <GoArrowRight/>
+              Premium <GoArrowRight />
             </h4>
             <ul className="mt-4">
               <li className="flex gap-2 items-center">

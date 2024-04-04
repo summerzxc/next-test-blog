@@ -1,11 +1,14 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import { BiBookmarkAlt } from "react-icons/bi";
-
+import { BiSolidBookmarkAlt } from "react-icons/bi";
 
 export default function WideBlog() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="w-full flex flex-col gap-3 py-6 border-b ">
+    <div className="w-full flex flex-col gap-3 py-6 border-b cursor-pointer">
       <div className="flex items-center gap-2">
         <div className="flex gap-2 items-center">
           <div className="w-[20px] h-[20px] bg-black rounded-full"></div>
@@ -33,10 +36,22 @@ export default function WideBlog() {
               </div>
               <span className="text-[14px]">10 min read</span>
             </div>
-            <BiBookmarkAlt size={20}/>
+            {isHovered ? (
+              <BiSolidBookmarkAlt
+                size={20}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              />
+            ) : (
+              <BiBookmarkAlt
+                size={20}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              />
+            )}
           </div>
         </div>
-        <div className="w-[140px] h-[140px] bg-black"></div>
+        <div className="w-[140px] h-[140px] bg-black rounded-md"></div>
       </div>
     </div>
   );
