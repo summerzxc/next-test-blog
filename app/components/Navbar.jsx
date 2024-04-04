@@ -25,20 +25,26 @@ export default function Navbar() {
               <a className="font-[600]">帰宅する</a>
             </li>
             <li>
-            <a className="font-[600]" >特徴</a>
+              <a className="font-[600]">特徴</a>
             </li>
             <li>
-            <a className="font-[600]">私供</a>
+              <a className="font-[600]">私供</a>
             </li>
             <li>
-            <details>
+              <details>
                 <summary className="font-[600]">公共事業</summary>
                 <ul class="p-2">
                   <li>
-                    <a href="/pages/publish" className="flex gap-3 font-[600]"><FaPenFancy className="text-[18px]"/><span className="text-nowrap">Publish / 公開</span></a>
+                    <a href="/pages/publish" className="flex gap-3 font-[600]">
+                      <FaPenFancy className="text-[18px]" />
+                      <span className="text-nowrap">Publish / 公開</span>
+                    </a>
                   </li>
                   <li>
-                  <a href="/pages/blogs" className="flex gap-3 font-[600]"><FaBookOpen className="text-[18px]"/><span className="text-nowrap">Blogs / ブログ</span></a>
+                    <a href="/pages/blogs" className="flex gap-3 font-[600]">
+                      <FaBookOpen className="text-[18px]" />
+                      <span className="text-nowrap">Blogs / ブログ</span>
+                    </a>
                   </li>
                 </ul>
               </details>
@@ -75,9 +81,11 @@ export default function Navbar() {
       </div>
       <div className="navbar-end gap-2 md:flex hidden">
         {status === "authenticated" && (
-          <span className="btn btn-outline text-sm english">
-            {session.user.name}
-          </span>
+          <a href="/pages/profile">
+            <span className="btn btn-outline text-sm english">
+              {session.user.name}
+            </span>
+          </a>
         )}
         {status === "authenticated" ? (
           <>

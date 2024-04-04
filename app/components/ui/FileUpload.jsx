@@ -3,12 +3,16 @@ import React, { useState } from "react";
 import { FiUpload } from "react-icons/fi";
 import Image from "next/image";
 
-export default function FileUpload() {
+export default function FileUpload({onChange}) {
+  
   const [uploadedImage, setUploadedImage] = useState(null);
   const [hovered, setHovered] = useState(false); // State to track hover state
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
+    console.log(file)
+    onChange(file)
+
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -16,6 +20,7 @@ export default function FileUpload() {
       };
       reader.readAsDataURL(file);
     }
+    
   };
 
   const handleImageChange = () => {

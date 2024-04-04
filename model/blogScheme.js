@@ -3,6 +3,10 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const Blog = Schema({
+  user_id: {
+    type: Schema.Types.ObjectId,
+    ref: "users",
+  },
   title: String,
   description: String,
   text: String,
