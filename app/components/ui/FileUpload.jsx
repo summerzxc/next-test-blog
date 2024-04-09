@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { FiUpload } from "react-icons/fi";
 import Image from "next/image";
-import { UploadToCloudinary } from "@/lib/cloudniaryUpload";
 
 export default function FileUpload({ onChange }) {
   const [uploadedImage, setUploadedImage] = useState(null);
