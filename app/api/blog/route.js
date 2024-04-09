@@ -4,12 +4,6 @@ import multer from "multer";
 import { getSession } from "next-auth/react";
 import { NextResponse } from "next/server";
 
-export const config = {
-  api: {
-    bodyParser: false,
-  }
-}
-
 // Multer configuration
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -22,7 +16,21 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-export async function GET(req, res) {
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
+export default async function handler(req, res) {
+  if (req.method === "GET") {
+    return handleGET(req, res);
+  } else if (req.method === "POST") {
+    return handlePOST(req, res);
+  }
+}
+
+async function handleGET(req, res) {
   try {
     await connectDB();
     const blogs = await blogModel.find();
@@ -32,19 +40,18 @@ export async function GET(req, res) {
   }
 }
 
-export async function POST(req, res) {
+async function handlePOST(req, res) {
   // const session = await getSession({ req });
   // console.log(session);
   // if (!session) {
   //   return NextResponse.error(401, "Unauthorized");
   // }
-  console.log(req)
+  console.log(req);
   try {
     await connectDB();
 
     // Upload the file and wait for completion
     upload.single("image")(req, res, async function (err) {
-      
       if (err) {
         // Handle multer upload error
         return NextResponse.error(500, "File upload failed");
