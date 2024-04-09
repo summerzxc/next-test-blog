@@ -19,14 +19,14 @@ const upload = multer({ storage: storage });
 export const config = {
   api: {
     bodyParser: false,
-  },
+  }
 };
 
 export default async function handler(req, res) {
-  if (req.method === "GET") {
-    return handleGET(req, res);
-  } else if (req.method === "POST") {
-    return handlePOST(req, res);
+  if (req.method === 'GET') {
+    await handleGET(req, res);
+  } else if (req.method === 'POST') {
+    await handlePOST(req, res);
   }
 }
 
@@ -52,6 +52,7 @@ async function handlePOST(req, res) {
 
     // Upload the file and wait for completion
     upload.single("image")(req, res, async function (err) {
+      
       if (err) {
         // Handle multer upload error
         return NextResponse.error(500, "File upload failed");
