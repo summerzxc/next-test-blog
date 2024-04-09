@@ -14,17 +14,16 @@ export default function Publish() {
   const handleFileChange = (file) => {
     console.log(file);
     setImage(file);
-    
   };
-  
 
   const handleSubmit = async () => {
     const formData = new FormData();
-    formData.append("image", image);
-    formData.append("title", title);
-    formData.append("description", description);
-    formData.append("text", text);
-    console.log(formData)
+    formData.set("image", image);
+    formData.set("title", title);
+    formData.set("description", description);
+    formData.set("text", text);
+
+    console.log(image, title, description, text);
     try {
       const response = await axios.post("/api/blog", formData, {
         headers: {
@@ -33,10 +32,8 @@ export default function Publish() {
       });
       if (response.status === 200) {
         console.log("Blog post created successfully!");
-        // Optionally, redirect the user to a success page or display a success message
       } else {
         console.error("Failed to create blog post");
-        // Handle error cases, show error message to the user
       }
     } catch (error) {
       console.error("Error:", error);

@@ -13,11 +13,17 @@ export default function BlogRightBar() {
       {/* Latest Posts */}
       <div className="w-full">
         <SliderTitle text="最新記事" />
-        <MiniBlog />
+        <a href="/pages/blog">
+          <MiniBlog />
+        </a>
         <hr />
-        <MiniBlog />
+        <a href="/pages/blog">
+          <MiniBlog />
+        </a>
         <hr />
-        <MiniBlog />
+        <a href="/pages/blog">
+          <MiniBlog />
+        </a>
         <BarLink />
       </div>
 
@@ -40,7 +46,14 @@ export default function BlogRightBar() {
       {/* Reading List */}
       <div className="w-full flex flex-col gap-3">
         <h3 className="font-[600]">リーディングリスト</h3>
-        <p className="text-[14px] text-[#888]">任意のストーリーをクリックすると <span className="inline-block"><BiBookmarkAlt size={18}/></span>、リーディング リストまたは共有できるカスタム リストに簡単に追加できます。</p>
+        <p className="text-[14px] text-[#888]">
+          任意のストーリーをクリックすると{" "}
+          <span className="inline-block">
+            <BiBookmarkAlt size={18} />
+          </span>
+          、リーディング リストまたは共有できるカスタム
+          リストに簡単に追加できます。
+        </p>
       </div>
     </div>
   );

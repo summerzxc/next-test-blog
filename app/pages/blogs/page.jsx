@@ -4,6 +4,7 @@ import BlogBar from "@/app/components/blog-page/BlogBar";
 import BlogCategories from "@/app/components/blog-page/Categories";
 import BlogRightBar from "@/app/components/blog-page/BlogRightBar";
 import BlogSlider from "@/app/components/blog-page/BlogSlider";
+import Footer from "@/app/single_use/Footer";
 
 export default function Page() {
   return (
@@ -19,6 +20,7 @@ export default function Page() {
           <BlogRightBar />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import MainBlogs from "@/app/components/main-page/MainBlogs";
 import MainCategories from "@/app/components/main-page/MainCategories";
+import Footer from "@/app/single_use/Footer";
 import React from "react";
 import { IoSearch } from "react-icons/io5";
 
@@ -24,6 +25,8 @@ export default function Page() {
       </div>
       <hr />
       <MainBlogs/>
+      <hr className="mt-[50px]"/>
+      <Footer/>
     </div>
   );
 }

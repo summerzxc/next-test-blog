@@ -2,16 +2,16 @@
 import React, { useState } from "react";
 import { FiUpload } from "react-icons/fi";
 import Image from "next/image";
+import { UploadToCloudinary } from "@/lib/cloudniaryUpload";
 
-export default function FileUpload({onChange}) {
-  
+export default function FileUpload({ onChange }) {
   const [uploadedImage, setUploadedImage] = useState(null);
   const [hovered, setHovered] = useState(false); // State to track hover state
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
-    console.log(file)
-    onChange(file)
+    console.log(file);
+    onChange(file);
 
     if (file) {
       const reader = new FileReader();
@@ -20,12 +20,16 @@ export default function FileUpload({onChange}) {
       };
       reader.readAsDataURL(file);
     }
-    
   };
 
   const handleImageChange = () => {
     setUploadedImage(null); // Reset uploaded image
   };
+
+  const FileUploadHandle = async () => {
+    const uploadImageUrl = await UploadToCloudinary(uploadedImage);
+    
+  }
 
   return (
     <div className="flex flex-col gap-3 justify-center items-center text-center">

@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="footer footer-center p-10 bg-primary text-primary-content">
+    <footer className="footer footer-center p-10 bg-white text-primary-content">
       <aside>
         <span className="text-4xl font-[600]">知の泉</span>
         <p className="font-bold">

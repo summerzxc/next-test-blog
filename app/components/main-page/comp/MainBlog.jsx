@@ -12,21 +12,27 @@ export default function MainBlog() {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="w-full flex flex-col gap-4">
-      <div className="bg-black w-full h-[200px] rounded-md"></div>
+      <a href="/pages/blog">
+        <div className="bg-black w-full h-[200px] rounded-md"></div>
+      </a>
       <div className="w-full flex flex-col gap-4">
         <div className="flex gap-1 items-center">
           <div className="bg-black h-[20px] w-[20px] rounded-full mr-1"></div>
-          <span className="text-[13px]">John Doe</span>
+          <a href="/pages/profile" className="hover:underline">
+            <span className="text-[13px]">John Doe</span>
+          </a>
           <span className="text-[13px] flex gap-1">
             in <BlogCategory text="Health" />
           </span>
         </div>
-        <div className="flex flex-col gap-2">
-          <h4 className="text-[20px] font-[600]">
-            私がこれまで一緒に働いた中で最も賢い人が私に一つのことを教えてくれました
-          </h4>
-          <p className="text-[#888]">そしてそれは一生私に残ります</p>
-        </div>
+        <a href="/pages/blog">
+          <div className="flex flex-col gap-2">
+            <h4 className="text-[20px] font-[600]">
+              私がこれまで一緒に働いた中で最も賢い人が私に一つのことを教えてくれました
+            </h4>
+            <p className="text-[#888]">そしてそれは一生私に残ります</p>
+          </div>
+        </a>
         <div className="flex gap-2 items-center text-[13px]">
           <span>12 min read</span>
           <span>•</span>
